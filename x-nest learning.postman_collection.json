@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "21b88bc1-3585-4c4f-a821-267694f0559b",
+		"name": "x-nest learning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20538723",
+		"_collection_link": "https://crimson-firefly-731601.postman.co/workspace/Jewellery-API~a4a2e4f0-fa31-4504-9d14-773a38684f87/collection/20538723-21b88bc1-3585-4c4f-a821-267694f0559b?action=share&source=collection_link&creator=20538723"
+	},
+	"item": [
+		{
+			"name": "find user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/john",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"john"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"john\",\n    \"password\": \"changeme\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcyNDkzMDYzMSwiZXhwIjoxNzI0OTMwNjYxfQ.Pxmrhy8UZKkuOfFvM-KQaKjcM8tiAgSvWZZG_VRNDmE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"john\",\n    \"password\": \"changeme\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -5,7 +5,6 @@ export type User = any;
 
 @Injectable()
 export class UserService {
-
   private readonly users = [
     {
       userId: 1,
@@ -19,7 +18,7 @@ export class UserService {
     },
   ];
   async findOne(username: any): Promise<User | undefined> {
-    return this.users.find(user => user.username === username);
+    return this.users.find((user) => user.username === username);
   }
   create(createUserDto: CreateUserDto) {
     return 'This action adds a new user';
@@ -28,7 +27,6 @@ export class UserService {
   findAll() {
     return `This action returns all user`;
   }
-
 
   update(id: number, updateUserDto: UpdateUserDto) {
     return `This action updates a #${id} user`;
